@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const products = [
+export const products = [
   {
     id: 1,
     name: "SKYRUN Gas Cooker 3-Gas 1-Hot Plate",
@@ -84,14 +84,14 @@ const products = [
 export default function PopularProducts() {
   return (
     <section className="flex flex-col ml-3 w-[69rem]">
-      <div className="flex justify-between items-center">
+      {/* <div className="flex justify-between items-center">
         <h1 className="font-bold font-sans text-black">Popular Products</h1>
         <Link href="/all-products">
           <span className="text-green-600 font-sans flex items-center gap-2 cursor-pointer text-sm font-semibold">
             See All <span className="text-3xl">→</span>
           </span>
         </Link>
-      </div>
+      </div> */}
 
       <div className="flex flex-wrap gap-6 mt-4  ">
         {products.map((product) => (
@@ -118,14 +118,14 @@ export default function PopularProducts() {
               <p className="text-black text-sm tracking-tighter font-sans leading-tight">
                 {product.brand}
               </p>
-              <h2 className="text-2xl text-black font-bold leading-tight">
+              <h2 className="text-2xl text-black font-semibold leading-tight">
                 {product.price}
               </h2>
               <p className="text-black text-sm tracking-tighter font-sans leading-tight">
                 or {product.installment}
               </p>
-              <div className="bg-green-800 text-white text-center text-sm h-10 w-48 mt-4 mx-auto rounded-md flex items-center justify-center">
-                Add to Cart
+              <div className="bg-green-800 text-white text-center  h-10 w-48 mt-4 mx-auto rounded-md flex items-center justify-center">
+                <p className="text-sm">Add to Cart</p>
               </div>
             </div>
           </div>

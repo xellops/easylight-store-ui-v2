@@ -16,7 +16,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="flex flex-col w-[20%] h-100 bg-gray-100 rounded-2xl ml-3 mt-[9px]">
+    <aside className="flex flex-col w-[20%] h-260 bg-gray-100 rounded-2xl ml-3 mt-[9px]">
       <Link
         href="/"
         className="flex items-center gap-1 mt-6 mb-2 ml-4 whitespace-nowrap"

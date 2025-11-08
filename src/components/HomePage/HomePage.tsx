@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar/Navbar";
 import OfferCard from "@/components/OfferCard/OfferCard";
 import CategoryFilter from "@/components/CategorySection/CategorySection";
 import PopularProducts from "@/components/PopularProducts/PopularProducts";
+import Main from "@/components/Main/Main";
+import Link from "next/link";
 
 export default function Homepage() {
   const offers = [
@@ -42,7 +44,7 @@ export default function Homepage() {
     <div className="flex">
       <Sidebar />
 
-      <main className="flex flex-col w-6xl   mr-3 mt-[-13px] ">
+      <Main>
         <Navbar />
 
         <h2 className="font-bold mt-4 ml-3">Special Offers</h2>
@@ -58,9 +60,19 @@ export default function Homepage() {
         </div>
 
         <div>
+          <div className="flex justify-between items-center">
+            <h1 className="font-bold font-sans text-black ml-4">
+              Popular Products
+            </h1>
+            <Link href="/all-products">
+              <span className="text-green-600 font-sans flex items-center gap-2 cursor-pointer text-sm font-semibold">
+                See All <span className="text-3xl">→</span>
+              </span>
+            </Link>
+          </div>
           <PopularProducts />
         </div>
-      </main>
+      </Main>
     </div>
   );
 }

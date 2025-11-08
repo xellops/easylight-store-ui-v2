@@ -15,7 +15,7 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center justify-end space-x-2 my-5 pr-6">
-        {/* Search box */}
+        {/* Search Input */}
         <div className="flex items-center w-60 h-9 rounded-md bg-gray-300 px-2">
           <input
             type="text"
