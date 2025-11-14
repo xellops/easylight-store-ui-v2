@@ -84,15 +84,6 @@ export const products = [
 export default function PopularProducts() {
   return (
     <section className="flex flex-col ml-3 w-[69rem]">
-      {/* <div className="flex justify-between items-center">
-        <h1 className="font-bold font-sans text-black">Popular Products</h1>
-        <Link href="/all-products">
-          <span className="text-green-600 font-sans flex items-center gap-2 cursor-pointer text-sm font-semibold">
-            See All <span className="text-3xl">→</span>
-          </span>
-        </Link>
-      </div> */}
-
       <div className="flex flex-wrap gap-6 mt-4  ">
         {products.map((product) => (
           <div
