@@ -11,15 +11,16 @@ export default function Explore() {
       <Sidebar />
       <Main>
         <Navbar />
-
         <div className="flex gap-5 ml-3 mt-5">
-          <div className="border border-green-800 w-29 h-10 rounded-3xl text-green-700  p-1 text-center font-sans">
+          <div className="border border-green-800 w-29 h-10 rounded-3xl text-green-700 flex items-center justify-center font-sans">
             Categories
           </div>
-          <div className="border border-green-800 w-29 h-10 rounded-3xl text-green-700 p-1 text-center font-sans">
+
+          <div className="border border-green-800 w-29 h-10 rounded-3xl text-green-700 flex items-center justify-center font-sans">
             Price Range
           </div>
-          <div className="border border-green-800 w-20 h-10 rounded-3xl text-green-700 p-1 text-center font-sans">
+
+          <div className="border border-green-800 w-20 h-10 rounded-3xl text-green-700 flex items-center justify-center font-sans">
             Brand
           </div>
         </div>
