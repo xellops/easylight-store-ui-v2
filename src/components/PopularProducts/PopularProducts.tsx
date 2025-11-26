@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,7 +10,7 @@ export const products = [
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
   {
@@ -17,7 +19,7 @@ export const products = [
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
   {
@@ -26,57 +28,52 @@ export const products = [
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
-
   {
     id: 4,
     name: "SKYRUN Gas Cooker 3-Gas 1-Hot Plate",
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
-
   {
     id: 5,
     name: "SKYRUN Gas Cooker 3-Gas 1-Hot Plate",
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
-
   {
     id: 6,
     name: "SKYRUN Gas Cooker 3-Gas 1-Hot Plate",
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
-
   {
     id: 7,
     name: "SKYRUN Gas Cooker 3-Gas 1-Hot Plate",
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
-
   {
     id: 8,
     name: "SKYRUN Gas Cooker 3-Gas 1-Hot Plate",
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
 ];
@@ -84,11 +81,12 @@ export const products = [
 export default function PopularProducts() {
   return (
     <section className="flex flex-col ml-3 w-[69rem]">
-      <div className="flex flex-wrap gap-6 mt-4  ">
+      <div className="flex flex-wrap gap-6 mt-4">
         {products.map((product) => (
-          <div
+          <Link
             key={product.id}
-            className="flex flex-col  h-80 gap-3 bg-gray-100 rounded-2xl"
+            href={`/products/${product.id}`}
+            className="flex flex-col h-80 gap-3 bg-gray-100 rounded-2xl cursor-pointer hover:shadow-lg transition"
           >
             <div className="w-48 h-36 mx-auto relative overflow-hidden mt-2">
               <Image
@@ -115,11 +113,11 @@ export default function PopularProducts() {
               <p className="text-black text-sm tracking-tighter font-sans leading-tight">
                 or {product.installment}
               </p>
-              <div className="bg-green-800 text-white text-center  h-10 w-48 mt-4 mx-auto rounded-md flex items-center justify-center">
+              <div className="bg-green-800 text-white text-center h-10 w-48 mt-4 mx-auto rounded-md flex items-center justify-center">
                 <p className="text-sm">Add to Cart</p>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

@@ -1,23 +1,20 @@
-import Link from "next/link";
-
 export default function CategorySection() {
   const categories = [
-    { label: "All Products", path: "/" },
-    { label: "Electronics", path: "/electronics" },
-    { label: "Home Appliances", path: "/home-appliances" },
-    { label: "Kitchen Gadgets", path: "/kitchen-gadgets" },
-    { label: "Cleaning Equipments", path: "/cleaning-equipments" },
-    { label: "Smart Home Devices", path: "/smart-home-devices" },
-    { label: "Heating & Cooling Systems", path: "/heating-cooling-systems" },
-    { label: "Laundry Appliances", path: "/laundry-appliances" },
+    { label: "All Products" },
+    { label: "Electronics" },
+    { label: "Home Appliances" },
+    { label: "Kitchen Gadgets" },
+    { label: "Cleaning Equipments" },
+    { label: "Smart Home Devices" },
+    { label: "Heating & Cooling Systems" },
+    { label: "Laundry Appliances" },
   ];
 
   return (
     <div className="w-full flex gap-2 mt-4 p-4 justify-center overflow-hidden">
       {categories.map((category, index) => (
-        <Link
+        <div
           key={index}
-          href={category.path}
           className={`flex-1 min-w-fit px-1 py-1 rounded-2xl font-sans text-sm text-center ml-2
             ${
               index === 0
@@ -26,7 +23,7 @@ export default function CategorySection() {
             }`}
         >
           {category.label}
-        </Link>
+        </div>
       ))}
     </div>
   );

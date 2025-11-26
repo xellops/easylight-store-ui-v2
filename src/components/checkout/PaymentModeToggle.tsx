@@ -1,11 +1,24 @@
 export default function PaymentModeToggle({ payMode, setPayMode }: any) {
+  const isOnce = payMode === "once";
+
   return (
     <div
-      className="bg-gray-100 w-70 h-10 mt-6 rounded-2xl flex justify-end items-center cursor-pointer"
-      onClick={() => setPayMode(payMode === "once" ? "installments" : "once")}
+      className="bg-gray-100 h-10 w-72 mt-6 rounded-2xl flex cursor-pointer p-1"
+      onClick={() => setPayMode(isOnce ? "installments" : "once")}
     >
-      <p className="mr-8 font-sans text-sm">Pay Once</p>
-      <div className="bg-green-800 rounded-2xl h-8 px-4 mr-2 text-sm flex justify-center items-center text-white">
+      <div
+        className={`flex-1 flex justify-center items-center rounded-2xl text-sm ${
+          isOnce ? "bg-green-800 text-white" : "text-gray-600"
+        }`}
+      >
+        Pay Once
+      </div>
+
+      <div
+        className={`flex-1 flex justify-center items-center rounded-2xl text-sm ${
+          !isOnce ? "bg-green-800 text-white" : "text-gray-600"
+        }`}
+      >
         Buy in installments
       </div>
     </div>

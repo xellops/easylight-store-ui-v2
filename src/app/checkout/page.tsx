@@ -60,7 +60,7 @@ export default function Checkout() {
       `Checkout ready: ₦${(payMode === "once"
         ? totalAmount
         : installmentAmount
-      ).toLocaleString()} × ${payMode === "once" ? 1 : installments}`
+      ).toLocaleString()} x ${payMode === "once" ? 1 : installments}`
     );
   }, [
     payMode,

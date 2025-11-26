@@ -15,7 +15,6 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center justify-end space-x-2 my-5 pr-6">
-        {/* Search Input */}
         <div className="flex items-center w-60 h-9 rounded-md bg-gray-300 px-2">
           <input
             type="text"
@@ -25,7 +24,6 @@ export default function Navbar() {
           <Search size={18} className="text-gray-600" />
         </div>
 
-        {/* Wallet balance */}
         <div className="flex items-center justify-center w-33 h-9 rounded-md bg-gray-300 p-2">
           <Wallet size={15} className="text-gray-600 mr-1" />
           <span className="text-gray-600  text-sm">₦5,270,632.00</span>

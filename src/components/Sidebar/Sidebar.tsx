@@ -59,12 +59,14 @@ export default function Sidebar() {
                     : "text-black hover:bg-gray-200"
                 }`}
             >
-              <Icon
-                size={20}
-                className={`transition-colors duration-200
-                  ${isActive ? "text-white" : "text-black"}
-                `}
-              />
+              <div className="w-5 h-5 flex items-center justify-center">
+                <Icon
+                  className={`transition-colors duration-200
+                    ${isActive ? "text-white" : "text-black"}
+                  `}
+                />
+              </div>
+
               <span
                 className={`text-sm whitespace-nowrap transition-colors duration-200
                   ${isActive ? "text-white" : "text-black"}

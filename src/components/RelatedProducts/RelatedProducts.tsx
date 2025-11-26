@@ -7,7 +7,7 @@ const relatedProducts = [
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
   {
@@ -16,7 +16,7 @@ const relatedProducts = [
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
   {
@@ -25,7 +25,7 @@ const relatedProducts = [
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
   {
@@ -34,7 +34,7 @@ const relatedProducts = [
     model: "50x50cm GCS-3G1E/X",
     brand: "Samsung",
     price: "₦180,000",
-    installment: "₦15,000/month × 12",
+    installment: "₦15,000/month x 12",
     image: "/images/SKYRUN.PNG",
   },
 ];
