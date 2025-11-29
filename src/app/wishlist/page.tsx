@@ -2,6 +2,7 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import Main from "@/components/Main/Main";
 import Navbar from "@/components/Navbar/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 
 const wishListItems = [
   {
@@ -54,11 +55,13 @@ export default function WishList() {
           My WishList ({wishListItems.length})
         </h2>
 
-        <div className="flex flex-wrap  justify-between ml-3 mt-5 w-[1100px] gap-6">
+        <div className="flex flex-wrap justify-between ml-3 mt-5 w-[1100px] gap-6">
           {wishListItems.map((item) => (
-            <div
+            <Link
               key={item.id}
-              className="flex flex-col h-80 gap-3 bg-gray-100 rounded-2xl w-60"
+              href={`/products/${item.id}`}
+              className="flex flex-col h-80 gap-3 bg-gray-100 rounded-2xl w-60 cursor-pointer hover:shadow-md transition"
+              aria-label={`Open ${item.name} product page`}
             >
               <div className="w-48 h-36 mx-auto relative overflow-hidden mt-2">
                 <Image
@@ -87,11 +90,11 @@ export default function WishList() {
                   or {item.installment}
                 </p>
 
-                <div className="bg-green-800 text-white text-center h-10 w-48 mt-4 mx-auto rounded-md flex items-center justify-center hover:bg-green-900 transition cursor-pointer">
+                <div className="bg-green-800 text-white text-center h-10 w-48 mt-4 mx-auto rounded-md flex items-center justify-center hover:bg-green-900 transition">
                   <p className="text-sm">Add to Cart</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </Main>
