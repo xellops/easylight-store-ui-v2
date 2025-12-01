@@ -59,34 +59,36 @@ export default function Sidebar() {
     }`;
 
   return (
-    <aside className="flex flex-col justify-between w-1/5 min-h-screen bg-gray-100 rounded-2xl p-4">
-      <div className="flex justify-center mb-6">
-        <Image
-          src="/images/easylight-logo.svg"
-          width={150}
-          height={150}
-          alt="EasyLight Logo"
-        />
+    <aside className="flex flex-col justify-between w-1/5 min-h-screen bg-gray-100 rounded-2xl p-4 mt-2 mb-2 ml-2">
+      <div className="flex flex-col">
+        <div className="flex justify-center">
+          <Image
+            src="/images/easylight-logo.svg"
+            width={150}
+            height={150}
+            alt="EasyLight Logo"
+          />
+        </div>
+
+        <div className="flex flex-col gap-1 mt-0 transform -translate-y-19">
+          {mainLinks.map(({ href, label, icon }) => (
+            <Link key={href} href={href}>
+              <div className={linkClasses(href)}>
+                <Image
+                  src={icon}
+                  width={20}
+                  height={20}
+                  alt={label}
+                  className={isActive(href) ? "filter invert" : ""}
+                />
+                <span className="whitespace-nowrap">{label}</span>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
 
-      <div className="flex flex-col gap-3 mb-auto">
-        {mainLinks.map(({ href, label, icon }) => (
-          <Link key={href} href={href}>
-            <div className={linkClasses(href)}>
-              <Image
-                src={icon}
-                width={20}
-                height={20}
-                alt={label}
-                className={isActive(href) ? "filter invert" : ""}
-              />
-              <span>{label}</span>
-            </div>
-          </Link>
-        ))}
-      </div>
-
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2">
         {bottomLinks.map(({ href, label, icon }) => (
           <Link key={href} href={href}>
             <div className={linkClasses(href)}>
@@ -97,7 +99,7 @@ export default function Sidebar() {
                 alt={label}
                 className={isActive(href) ? "filter invert" : ""}
               />
-              <span>{label}</span>
+              <span className="whitespace-nowrap">{label}</span>
             </div>
           </Link>
         ))}
