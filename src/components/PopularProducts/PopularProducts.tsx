@@ -11,7 +11,7 @@ export const products = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const products = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const products = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ export const products = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const products = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
   {
     id: 6,
@@ -56,7 +56,7 @@ export const products = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
   {
     id: 7,
@@ -65,7 +65,7 @@ export const products = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
   {
     id: 8,
@@ -74,7 +74,7 @@ export const products = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
 ];
 

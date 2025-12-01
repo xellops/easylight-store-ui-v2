@@ -12,7 +12,7 @@ const wishListItems = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const wishListItems = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const wishListItems = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const wishListItems = [
     brand: "Samsung",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.PNG",
+    image: "/images/SKYRUN.png",
   },
 ];
 
