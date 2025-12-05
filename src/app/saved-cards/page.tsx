@@ -1,18 +1,17 @@
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Main from "@/components/Main/Main";
 import Navbar from "@/components/Navbar/Navbar";
-import OrderHistory from "@/components/OrderHistory/OrderHistory";
-const Orders = () => {
+import SavedCardInfo from "@/components/SavedCardInfo/SavedCardInfo";
+
+export default function SavedCards() {
   return (
-    <div className="flex">
+    <div className="flex ">
       <Sidebar />
       <Main>
         <Navbar />
 
-        <OrderHistory />
+        <SavedCardInfo />
       </Main>
     </div>
   );
-};
-
-export default Orders;
+}

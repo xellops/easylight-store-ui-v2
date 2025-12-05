@@ -1,18 +1,15 @@
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Main from "@/components/Main/Main";
 import Navbar from "@/components/Navbar/Navbar";
-import OrderHistory from "@/components/OrderHistory/OrderHistory";
-const Orders = () => {
+import VerificationStatus from "@/components/VerificationStatus/VerificationStatus";
+export default function verification() {
   return (
-    <div className="flex">
+    <div className="flex ">
       <Sidebar />
       <Main>
         <Navbar />
-
-        <OrderHistory />
+        <VerificationStatus />
       </Main>
     </div>
   );
-};
-
-export default Orders;
+}
