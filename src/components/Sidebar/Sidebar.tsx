@@ -59,7 +59,7 @@ export default function Sidebar() {
     }`;
 
   return (
-    <aside className="flex flex-col justify-between w-1/5 min-h-screen bg-gray-100 rounded-2xl p-4 mt-2 mb-2 ml-2">
+    <aside className="flex flex-col justify-between w-1/5 min-h-screen max-md:hidden bg-gray-100 rounded-2xl p-4 mt-2 mb-2 ml-2">
       <div className="flex flex-col">
         <div className="flex justify-center">
           <Image

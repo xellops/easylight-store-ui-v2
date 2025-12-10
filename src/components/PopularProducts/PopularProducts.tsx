@@ -80,15 +80,19 @@ export const products = [
 
 export default function PopularProducts() {
   return (
-    <section className="flex flex-col ml-3 w-[69rem]">
-      <div className="flex flex-wrap gap-6 mt-4">
+    <section className="flex flex-col ml-3 w-[69rem] max-sm:w-full px-2">
+      <div
+        className="grid gap-4 mt-4 
+                      max-sm:grid-cols-2 max-sm:grid-rows-4 
+                      sm:flex sm:flex-wrap"
+      >
         {products.map((product) => (
           <Link
             key={product.id}
             href={`/products/${product.id}`}
-            className="flex flex-col h-80 gap-3 bg-gray-100 rounded-2xl cursor-pointer hover:shadow-lg transition"
+            className="flex flex-col h-80 gap-3 bg-gray-100 rounded-2xl cursor-pointer hover:shadow-lg transition max-sm:w-full"
           >
-            <div className="w-48 h-36 mx-auto relative overflow-hidden mt-2">
+            <div className="w-full h-36 relative overflow-hidden mt-2">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -97,7 +101,7 @@ export default function PopularProducts() {
               />
             </div>
 
-            <div className="flex flex-col w-64 p-3 mx-auto">
+            <div className="flex flex-col p-3 w-full">
               <p className="text-black text-sm tracking-tighter font-sans mb-2 leading-tight">
                 {product.name}
               </p>
@@ -107,13 +111,13 @@ export default function PopularProducts() {
               <p className="text-black text-sm tracking-tighter font-sans leading-tight">
                 {product.brand}
               </p>
-              <h2 className="text-2xl text-black font-semibold leading-tight">
+              <h2 className="text-xl text-black font-semibold leading-tight">
                 {product.price}
               </h2>
               <p className="text-black text-sm tracking-tighter font-sans leading-tight">
                 or {product.installment}
               </p>
-              <div className="bg-green-800 text-white text-center h-10 w-48 mt-4 mx-auto rounded-md flex items-center justify-center">
+              <div className="bg-green-800 text-white text-center h-10 mt-4 rounded-md flex items-center justify-center">
                 <p className="text-sm">Add to Cart</p>
               </div>
             </div>
