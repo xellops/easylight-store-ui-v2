@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav
       className="
         flex justify-between bg-gray-100 mt-6 ml-3 w-[69rem] h-20 rounded-2xl
-        max-sm:flex-col max-sm:h-52 max-sm:w-full
+        max-sm:flex-col max-sm:h-full max-sm:w-full
         max-sm:p-4 max-sm:mx-auto max-sm:ml-0 max-sm:m-0 max-sm:rounded-none
       "
     >
