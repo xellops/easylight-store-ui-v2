@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav
       className="
         flex justify-between bg-gray-100 mt-6 ml-3 w-[69rem] h-20 rounded-2xl
-        max-sm:flex-col max-sm:h-full max-sm:w-full
+        max-sm:flex-col max-sm:h-50 max-sm:w-full
         max-sm:p-4 max-sm:mx-auto max-sm:ml-0 max-sm:m-0 max-sm:rounded-none
       "
     >
@@ -26,14 +26,15 @@ export default function Navbar() {
       <div
         className="
           flex items-center justify-end space-x-2 my-5 pr-6
-          max-sm:flex-col-reverse max-sm:space-x-0 max-sm:space-y-3
+          max-sm:flex-row max-sm:justify-between max-sm:items-center
+          max-sm:space-x-2 max-sm:space-y-0
           max-sm:w-full max-sm:p-0
         "
       >
         <div
           className="
             flex items-center w-60 h-9 rounded-md bg-gray-300 px-2
-            max-sm:w-[33%] max-sm:mt-4 max-sm:self-start 
+            max-sm:w-90 max-sm:mt-0 max-sm:relative max-sm:translate-y-4
           "
         >
           <input
@@ -47,7 +48,7 @@ export default function Navbar() {
         <div
           className="
             flex items-center justify-center w-33 h-9 rounded-md bg-gray-300 p-2
-            max-sm:w-auto max-sm:self-end
+            max-sm:w-auto max-sm:relative max-sm:-translate-y-21 max-sm:-translate-x-34
           "
         >
           <Wallet size={15} className="text-gray-600 mr-1" />

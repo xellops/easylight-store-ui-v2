@@ -11,10 +11,8 @@ export const products = [
     brand: "SKYRUN",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.png",
-    mobileImage: "/images/mobileimage.png",
+    imageMobile: "/images/mobileimage.png",
   },
-
   {
     id: 2,
     name: "SKYRUN Gas Cooker 3-Gas 1-Hot Plate",
@@ -22,8 +20,7 @@ export const products = [
     brand: "SKYRUN",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.png",
-    mobileImage: "/images/mobileimage.png",
+    imageMobile: "/images/mobileimage.png",
   },
   {
     id: 3,
@@ -32,8 +29,7 @@ export const products = [
     brand: "SKYRUN",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.png",
-    mobileImage: "/images/mobileimage.png",
+    imageMobile: "/images/mobileimage.png",
   },
   {
     id: 4,
@@ -42,8 +38,7 @@ export const products = [
     brand: "SKYRUN",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.png",
-    mobileImage: "/images/mobileimage.png",
+    imageMobile: "/images/mobileimage.png",
   },
   {
     id: 5,
@@ -52,8 +47,7 @@ export const products = [
     brand: "SKYRUN",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.png",
-    mobileImage: "/images/mobileimage.png",
+    imageMobile: "/images/mobileimage.png",
   },
   {
     id: 6,
@@ -62,8 +56,7 @@ export const products = [
     brand: "SKYRUN",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.png",
-    mobileImage: "/images/mobileimage.png",
+    imageMobile: "/images/mobileimage.png",
   },
   {
     id: 7,
@@ -72,8 +65,7 @@ export const products = [
     brand: "SKYRUN",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.png",
-    mobileImage: "/images/mobileimage.png",
+    imageMobile: "/images/mobileimage.png",
   },
   {
     id: 8,
@@ -82,66 +74,54 @@ export const products = [
     brand: "SKYRUN",
     price: "₦180,000",
     installment: "₦15,000/month x 12",
-    image: "/images/SKYRUN.png",
-    mobileImage: "/images/mobileimage.png",
+    imageMobile: "/images/mobileimage.png",
   },
 ];
 
 export default function PopularProducts() {
   return (
-    <section className="flex flex-col ml-3 w-[69rem] max-sm:w-full max-sm:ml-0">
-      <div
-        className="flex flex-wrap gap-6 mt-4 
-        max-sm:grid max-sm:grid-cols-2 max-sm:gap-2"
-      >
+    <section className="w-full px-4 py-6 bg-gray-50">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 lg:gap-6 max-w-7xl mx-auto">
         {products.map((product) => (
           <Link
             key={product.id}
             href={`/products/${product.id}`}
-            className="
-              flex flex-col h-80 gap-3 bg-gray-100 rounded-2xl cursor-pointer hover:shadow-lg transition
-              max-sm:h-auto max-sm:w-full max-sm:p-2
-            "
+            className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-md active:scale-[0.98] transition-transform duration-150"
           >
-            <div className="w-48 h-36 mx-auto relative overflow-hidden mt-2 max-sm:w-full max-sm:h-32">
-              {/* Desktop Image */}
+            <div className="relative w-full aspect-square">
               <Image
-                src={product.image}
+                src={product.imageMobile}
                 alt={product.name}
                 fill
-                style={{ objectFit: "cover" }}
-                className="hidden sm:block"
-              />
-              {/* Mobile Image */}
-              <Image
-                src={product.mobileImage}
-                alt={product.name}
-                fill
-                style={{ objectFit: "cover" }}
-                className="block sm:hidden"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                className="object-cover"
+                priority={product.id <= 4}
               />
             </div>
 
-            <div className="flex flex-col w-64 p-3 mx-auto max-sm:w-full max-sm:p-2">
-              <p className="text-black text-sm tracking-tighter font-sans mb-1 leading-tight max-sm:text-xs">
-                {product.name}
-              </p>
-              <p className="text-black text-sm tracking-tighter font-sans leading-tight max-sm:text-xs">
-                {product.model}
-              </p>
-              <p className="text-black text-sm tracking-tighter font-sans leading-tight max-sm:text-xs">
-                {product.brand}
-              </p>
-              <h2 className="text-2xl text-black font-semibold leading-tight max-sm:text-sm">
-                {product.price}
-              </h2>
-              <p className="text-black text-sm tracking-tighter font-sans leading-tight max-sm:text-[11px]">
-                or {product.installment}
-              </p>
+            <div className="p-3 pb-4 flex flex-col justify-between flex-1">
+              <div>
+                <h3 className="font-semibold text-sm leading-tight line-clamp-2 min-h-[2.5rem]">
+                  {product.name}
+                </h3>
+                <p className="text-xs text-gray-600 mt-1">{product.model}</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider mt-1">
+                  {product.brand}
+                </p>
 
-              <div className="bg-green-800 text-white text-center h-10 w-48 mt-4 mx-auto rounded-md flex items-center justify-center max-sm:w-full max-sm:h-8 max-sm:mt-2 max-sm:hidden">
-                <p className="text-sm max-sm:text-xs">Add to Cart</p>
+                <div className="mt-3">
+                  <p className="text-lg font-bold text-gray-900">
+                    {product.price}
+                  </p>
+                  <p className="text-xs text-gray-600 mt-0.5">
+                    or {product.installment}
+                  </p>
+                </div>
               </div>
+
+              <button className="mt-4 hidden sm:block w-full bg-green-700 hover:bg-green-800 active:bg-green-900 text-white font-medium text-sm py-3 rounded-lg transition-colors">
+                Add to Cart
+              </button>
             </div>
           </Link>
         ))}
