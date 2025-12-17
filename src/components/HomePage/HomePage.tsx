@@ -1,3 +1,5 @@
+"use client";
+
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Navbar from "@/components/Navbar/Navbar";
 import OfferCard from "@/components/OfferCard/OfferCard";
@@ -41,37 +43,41 @@ export default function Homepage() {
   ];
 
   return (
-    <div className="flex">
+    <div className="flex flex-col w-full min-h-screen lg:flex-row">
       <Sidebar />
 
       <Main>
         <Navbar />
 
-        <h2 className="font-bold mt-4 ml-3">Special Offers</h2>
+        <section className="w-full p-4">
+          <h2 className="font-bold text-base sm:text-lg mb-3">
+            Special Offers
+          </h2>
 
-        <div className="flex justify-between h-40 ml-3 w-[99%] mt-4 ">
-          {offers.map((offer) => (
-            <OfferCard key={offer.id} offer={offer} />
-          ))}
-        </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {offers.map((offer) => (
+              <OfferCard key={offer.id} offer={offer} />
+            ))}
+          </div>
+        </section>
 
-        <div className="mb-3">
+        <section className="w-full p-4">
           <CategoryFilter />
-        </div>
+        </section>
 
-        <div>
-          <div className="flex justify-between items-center">
-            <h1 className="font-bold font-sans text-black ml-4">
-              Popular Products
-            </h1>
+        <section className="w-full p-4">
+          <div className="flex items-center justify-between mb-4">
+            <h1 className="font-bold text-base sm:text-lg">Popular Products</h1>
+
             <Link href="/all-products">
-              <span className="text-green-600 font-sans flex items-center gap-2 cursor-pointer text-sm font-semibold">
-                See All <span className="text-3xl">→</span>
+              <span className="flex items-center gap-1 text-green-600 text-sm font-semibold cursor-pointer">
+                See All <span className="text-xl">→</span>
               </span>
             </Link>
           </div>
+
           <PopularProducts />
-        </div>
+        </section>
       </Main>
     </div>
   );

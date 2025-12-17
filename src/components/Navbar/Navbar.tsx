@@ -6,51 +6,39 @@ export default function Navbar() {
   return (
     <nav
       className="
-        flex justify-between bg-gray-100 mt-6 ml-3 w-[69rem] h-20 rounded-2xl
-        max-sm:flex-col max-sm:h-50 max-sm:w-full
-        max-sm:p-4 max-sm:mx-auto max-sm:ml-0 max-sm:m-0 max-sm:rounded-none
+        flex flex-col gap-4
+        bg-gray-100 w-full p-4 rounded-none
+        sm:flex-row sm:items-center sm:justify-between
+        sm:h-20 sm:rounded-2xl sm:mt-6 sm:ml-3 sm:w-[69rem]
       "
     >
-      <div className="w-[50%] h-9 m-5 max-sm:w-full max-sm:m-0 max-sm:mt-6">
-        <h2 className="text-black font-sans max-sm:text-sm font-semibold">
+      <div className="w-full sm:w-1/2">
+        <h2 className="text-sm sm:text-base font-semibold text-black">
           Welcome back, Dwight
         </h2>
 
-        <p className="text-black font-sans leading-tight max-sm:leading-normal max-sm:mt-2">
-          Discover amazing products
-          <br className="max-sm:block hidden" />
-          with flexible payments plans
+        <p className="text-sm leading-normal text-black mt-1">
+          Discover amazing products with flexible payment plans
         </p>
       </div>
 
       <div
         className="
-          flex items-center justify-end space-x-2 my-5 pr-6
-          max-sm:flex-row max-sm:justify-between max-sm:items-center
-          max-sm:space-x-2 max-sm:space-y-0
-          max-sm:w-full max-sm:p-0
+          flex items-center justify-between gap-2
+          w-full
+          sm:w-auto sm:justify-end
         "
       >
-        <div
-          className="
-            flex items-center w-60 h-9 rounded-md bg-gray-300 px-2
-            max-sm:w-90 max-sm:mt-0 max-sm:relative max-sm:translate-y-4
-          "
-        >
+        <div className="flex items-center w-full sm:w-60 h-9 rounded-md bg-gray-300 px-2">
           <input
             type="text"
             placeholder="Search"
-            className="flex-1 bg-transparent outline-none text-gray-700"
+            className="flex-1 bg-transparent outline-none text-gray-700 text-sm"
           />
           <Search size={18} className="text-gray-600" />
         </div>
 
-        <div
-          className="
-            flex items-center justify-center w-33 h-9 rounded-md bg-gray-300 p-2
-            max-sm:w-auto max-sm:relative max-sm:-translate-y-21 max-sm:-translate-x-34
-          "
-        >
+        <div className="flex items-center justify-center h-9 rounded-md bg-gray-300 px-3">
           <Wallet size={15} className="text-gray-600 mr-1" />
           <span className="text-gray-600 text-sm">₦5,270,632.00</span>
         </div>
