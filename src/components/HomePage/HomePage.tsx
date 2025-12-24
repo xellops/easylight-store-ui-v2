@@ -67,7 +67,9 @@ export default function Homepage() {
 
         <section className="w-full p-4">
           <div className="flex items-center justify-between mb-4">
-            <h1 className="font-bold text-base sm:text-lg">Popular Products</h1>
+            <h1 className="font-bold -translate-y-9 sm:translate-y-0 text-base sm:text-lg">
+              Popular Products
+            </h1>
 
             <Link href="/all-products">
               <span className="flex items-center gap-1 text-green-600 text-sm font-semibold cursor-pointer">

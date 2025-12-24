@@ -82,17 +82,17 @@ export default function PopularProducts() {
   return (
     <section className="w-full p-4 sm:p-6">
       <div className="w-full max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 lg:gap-6">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
           {products.map((product) => (
             <Link
               key={product.id}
               href={`/products/${product.id}`}
               className="
                 flex flex-col bg-white rounded-2xl overflow-hidden
-                shadow-md transition-transform active:scale-[0.98]
+                shadow-md transition-transform active:scale-[0.98]  w-[30%] border border-red-500 sm:border-0 sm:w-auto h-[120px] sm:h-auto
               "
             >
-              <div className="relative w-full aspect-square">
+              <div className="relative w-full aspect-4/3 sm:aspect-square">
                 <Image
                   src={product.imageMobile}
                   alt={product.name}
@@ -103,7 +103,7 @@ export default function PopularProducts() {
                 />
               </div>
 
-              <div className="flex flex-col flex-1 p-3 pb-4">
+              <div className="flex flex-col flex-1 sm:p-3 pb-4">
                 <div>
                   <h3 className="text-sm font-semibold leading-tight line-clamp-2 min-h-[2.5rem]">
                     {product.name}

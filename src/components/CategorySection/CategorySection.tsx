@@ -11,7 +11,7 @@ export default function CategorySection() {
   ];
 
   return (
-    <div className="w-full flex gap-2 mt-4 p-4 justify-center overflow-hidden">
+    <div className="hidden sm:flex w-full gap-2 mt-6 p-4 justify-center overflow-hidden">
       {categories.map((category, index) => (
         <div
           key={index}
